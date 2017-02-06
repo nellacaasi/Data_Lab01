@@ -1,7 +1,10 @@
+package views;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
+
+import controllers.CalcEngine;
 
 /**
  * A graphical user interface for the calculator. No calculation is being

@@ -1,3 +1,6 @@
+package controllers;
+
+import views.UserInterface;
 
 /**
  * The main class of a simple calculator. Create one of these and you'll
