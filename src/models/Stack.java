@@ -1,46 +1,24 @@
 package models;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Stack {
-	private String[] stackArray;
+	private ArrayList<Object> stackArray;
 	
-	private int stackSize;
-	
-	private int topOfStack = -1;
-	
-	Stack(int size){
-		stackSize = size;
-		
-		stackArray = new String[size];
-		
-		Arrays.fill(stackArray, "-1");
+	public Stack(){
+		stackArray = new ArrayList<Object>();
 	}
 	
-	public void push(String input){
-		if(topOfStack +1 < stackSize){
-			topOfStack++;
-			
-			stackArray[topOfStack] = input;
-		}
-		else{
-			System.out.println("No room in Stack");
-		}
+	public void push(Object input){
+		stackArray.add(input);
 	}
 	
-	public String pop(){
-		if(topOfStack >= 0){
-			stackArray[topOfStack] = "-1";
-			
-			return stackArray[topOfStack--];
-		}
-		else{
-			System.out.println("Stack is empty");
-			return "-1";
-		}
+	public Object pop(){
+			Object output = stackArray.remove(stackArray.size()-1);
+			return output;
 	}
 	
-	public String peek(){
-		return stackArray[topOfStack];
+	public Object peek(){
+		return stackArray.get(stackArray.size() - 1);
 	}
 }
